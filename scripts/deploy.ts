@@ -5,7 +5,9 @@ async function main() {
 
   await bookDatabase.waitForDeployment();
 
-  console.log(`Deploy finished`);
+  const address = await bookDatabase.getAddress();
+
+  console.log(`Deploy finished at ${address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
